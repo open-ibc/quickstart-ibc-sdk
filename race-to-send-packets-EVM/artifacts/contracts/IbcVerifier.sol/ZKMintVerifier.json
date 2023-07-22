@@ -1,0 +1,239 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "ZKMintVerifier",
+  "sourceName": "contracts/IbcVerifier.sol",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "app_hash",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "valset_hash",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "time",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "height",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct ConsensusState",
+          "name": "consensusState",
+          "type": "tuple"
+        },
+        {
+          "components": [
+            {
+              "internalType": "uint64",
+              "name": "proofHeight",
+              "type": "uint64"
+            },
+            {
+              "internalType": "bytes",
+              "name": "proof",
+              "type": "bytes"
+            }
+          ],
+          "internalType": "struct Proof",
+          "name": "proof",
+          "type": "tuple"
+        },
+        {
+          "internalType": "bytes",
+          "name": "key",
+          "type": "bytes"
+        },
+        {
+          "internalType": "bytes",
+          "name": "expectedValue",
+          "type": "bytes"
+        }
+      ],
+      "name": "verifyMembership",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "app_hash",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "valset_hash",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "time",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "height",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct ConsensusState",
+          "name": "consensusState",
+          "type": "tuple"
+        },
+        {
+          "components": [
+            {
+              "internalType": "uint64",
+              "name": "proofHeight",
+              "type": "uint64"
+            },
+            {
+              "internalType": "bytes",
+              "name": "proof",
+              "type": "bytes"
+            }
+          ],
+          "internalType": "struct Proof",
+          "name": "proof",
+          "type": "tuple"
+        },
+        {
+          "internalType": "bytes",
+          "name": "key",
+          "type": "bytes"
+        }
+      ],
+      "name": "verifyNonMembership",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "pure",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "app_hash",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "valset_hash",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "time",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "height",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct ConsensusState",
+          "name": "lastConsensusState",
+          "type": "tuple"
+        },
+        {
+          "components": [
+            {
+              "components": [
+                {
+                  "internalType": "uint256",
+                  "name": "app_hash",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "valset_hash",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "time",
+                  "type": "uint256"
+                },
+                {
+                  "internalType": "uint256",
+                  "name": "height",
+                  "type": "uint256"
+                }
+              ],
+              "internalType": "struct ConsensusState",
+              "name": "consensusState",
+              "type": "tuple"
+            },
+            {
+              "components": [
+                {
+                  "internalType": "uint256[2]",
+                  "name": "a",
+                  "type": "uint256[2]"
+                },
+                {
+                  "internalType": "uint256[2][2]",
+                  "name": "b",
+                  "type": "uint256[2][2]"
+                },
+                {
+                  "internalType": "uint256[2]",
+                  "name": "c",
+                  "type": "uint256[2]"
+                }
+              ],
+              "internalType": "struct ZkProof",
+              "name": "zkProof",
+              "type": "tuple"
+            }
+          ],
+          "internalType": "struct UpdateClientMsg",
+          "name": "newConsensusState",
+          "type": "tuple"
+        }
+      ],
+      "name": "verifyUpdateClientMsg",
+      "outputs": [
+        {
+          "internalType": "bool",
+          "name": "",
+          "type": "bool"
+        }
+      ],
+      "stateMutability": "view",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}
