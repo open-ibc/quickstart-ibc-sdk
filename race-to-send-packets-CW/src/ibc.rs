@@ -15,7 +15,7 @@ use crate::{
   state::{State, CHANNEL_STATE},
 };
 
-pub const IBC_VERSION: &str = "messenger-1";
+pub const IBC_VERSION: &str = "1.0";
 
 /// Handles the `OpenInit` and `OpenTry` parts of the IBC handshake
 #[cfg_attr(not(feature = "library"), entry_point)]
