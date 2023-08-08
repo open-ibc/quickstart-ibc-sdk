@@ -1,0 +1,20 @@
+{
+  "name": "test-vibc-sc",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@open-ibc/vibc-core-smart-contracts": "^0.0.8",
+    "bytes32": "^0.0.3",
+    "hardhat": "^2.17.1"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^3.0.0"
+  }
+}
