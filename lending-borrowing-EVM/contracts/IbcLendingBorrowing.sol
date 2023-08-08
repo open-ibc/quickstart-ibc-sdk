@@ -76,7 +76,7 @@ contract IbcLendingBorrowing is IbcReceiver, IToken, Ownable{
         balances[to] += amount;
 
         // Notify off-chain applications of the transfer.
-        // emit Transfer(msg.sender, to, amount);
+        emit Transfer(msg.sender, to, amount);
     }
 
     function transferFrom(address from, address to, uint256 amount) external {
@@ -85,7 +85,7 @@ contract IbcLendingBorrowing is IbcReceiver, IToken, Ownable{
         balances[from] -= amount;
         balances[to] += amount;
 
-        // emit Transfer(from, to, amount);
+        emit Transfer(from, to, amount);
     }
 
     
