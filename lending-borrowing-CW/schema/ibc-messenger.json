@@ -1,0 +1,102 @@
+{
+  "contract_name": "ibc-messenger",
+  "contract_version": "0.1.0",
+  "idl_version": "1.0.0",
+  "instantiate": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "InstantiateMsg",
+    "type": "object",
+    "additionalProperties": false
+  },
+  "execute": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "ExecuteMsg",
+    "oneOf": [
+      {
+        "type": "object",
+        "required": [
+          "send_message"
+        ],
+        "properties": {
+          "send_message": {
+            "type": "object",
+            "required": [
+              "channel",
+              "message"
+            ],
+            "properties": {
+              "channel": {
+                "type": "string"
+              },
+              "message": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      }
+    ]
+  },
+  "query": {
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "title": "QueryMsg",
+    "oneOf": [
+      {
+        "description": "Return the state for a particular channel",
+        "type": "object",
+        "required": [
+          "get_state"
+        ],
+        "properties": {
+          "get_state": {
+            "type": "object",
+            "required": [
+              "channel"
+            ],
+            "properties": {
+              "channel": {
+                "type": "string"
+              }
+            },
+            "additionalProperties": false
+          }
+        },
+        "additionalProperties": false
+      }
+    ]
+  },
+  "migrate": null,
+  "sudo": null,
+  "responses": {
+    "get_state": {
+      "$schema": "http://json-schema.org/draft-07/schema#",
+      "title": "GetStateResponse",
+      "type": "object",
+      "required": [
+        "count_received",
+        "count_sent"
+      ],
+      "properties": {
+        "count_received": {
+          "type": "integer",
+          "format": "uint32",
+          "minimum": 0.0
+        },
+        "count_sent": {
+          "type": "integer",
+          "format": "uint32",
+          "minimum": 0.0
+        },
+        "latest_message": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      },
+      "additionalProperties": false
+    }
+  }
+}
