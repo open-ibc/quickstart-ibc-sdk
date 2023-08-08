@@ -5,7 +5,7 @@ module.exports = {
   solidity: '0.8.19',
   networks: {
     localibcsdk: {
-      url: 'http://127.0.0.1:32777',
+      url: 'http://127.0.0.1:32821',
       accounts: [
         '0x826cccccf88094269e637c816d8895f138b89e03dfa2fdd8b5d9e1feea1cb9aa',
         '0x15188f87d4fd462b13c8f3b81c3a818ceb68fb596da273d6b7ee9f05f588e207',
