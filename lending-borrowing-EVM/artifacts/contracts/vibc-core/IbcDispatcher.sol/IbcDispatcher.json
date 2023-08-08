@@ -1,0 +1,69 @@
+{
+  "_format": "hh-sol-artifact-1",
+  "contractName": "IbcDispatcher",
+  "sourceName": "contracts/vibc-core/IbcDispatcher.sol",
+  "abi": [
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "channelId",
+          "type": "bytes32"
+        }
+      ],
+      "name": "closeIbcChannel",
+      "outputs": [],
+      "stateMutability": "nonpayable",
+      "type": "function"
+    },
+    {
+      "inputs": [
+        {
+          "internalType": "bytes32",
+          "name": "channelId",
+          "type": "bytes32"
+        },
+        {
+          "internalType": "bytes",
+          "name": "payload",
+          "type": "bytes"
+        },
+        {
+          "internalType": "uint64",
+          "name": "timeoutTimestamp",
+          "type": "uint64"
+        },
+        {
+          "components": [
+            {
+              "internalType": "uint256",
+              "name": "recvFee",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "ackFee",
+              "type": "uint256"
+            },
+            {
+              "internalType": "uint256",
+              "name": "timeoutFee",
+              "type": "uint256"
+            }
+          ],
+          "internalType": "struct PacketFee",
+          "name": "fee",
+          "type": "tuple"
+        }
+      ],
+      "name": "sendPacket",
+      "outputs": [],
+      "stateMutability": "payable",
+      "type": "function"
+    }
+  ],
+  "bytecode": "0x",
+  "deployedBytecode": "0x",
+  "linkReferences": {},
+  "deployedLinkReferences": {}
+}
