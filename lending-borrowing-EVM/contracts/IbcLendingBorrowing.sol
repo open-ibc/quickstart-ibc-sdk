@@ -50,22 +50,22 @@ contract IbcLendingBorrowing is IbcReceiver, IToken, Ownable{
     bytes32[] supportedVersionsBytes = [bytes32('1.0'), bytes32('2.0')]; // Temp solution, will be removed.
 
     // at initialization, we'll mint 1e18 of initial supply of the "lbToken"
-    constructor(address _plym, address _oibc, address _neb) {
+    constructor(address _plym, address _oibc, address _ibcg) {
         // The totalSupply is assigned to the transaction sender, which is the
         // account that is deploying the contract.
         balances[address(this)] = totalSupply;
 
         contractAddresses[1] = _plym;
         contractAddresses[2] = _oibc;
-        contractAddresses[3] = _neb;
+        contractAddresses[3] = _ibcg;
 
         // supply:
         // PLYM: 1,000,000
         // OIBC: 200,000
-        // NEB: 50,000
+        // IBCG: 50,000
         tokenPrices[_oibc] = 500;
         tokenPrices[_plym] = 100;
-        tokenPrices[_neb] = 2000;
+        tokenPrices[_ibcg] = 2000;
     }
 
     function transfer(address to, uint256 amount) external {
@@ -123,12 +123,11 @@ contract IbcLendingBorrowing is IbcReceiver, IToken, Ownable{
 
     // IBC Packet callbacks
 
-    // TODO
     function onRecvPacket(IbcPacket calldata packet) external returns (AckPacket memory ackPacket) {
         recvedPackets.push(packet);
         //PollPacketData memory _pollPacketData = abi.decode(packet.data, (PollPacketData));
 
-        // hard coding this until we have solution for encoding/decoding scheme
+        // TODO: hard coding this until we have solution for encoding/decoding scheme
         address choice = contractAddresses[3];
         this.borrow(choice, collateral[1], 25000);
 

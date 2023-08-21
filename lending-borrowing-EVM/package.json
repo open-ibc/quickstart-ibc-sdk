@@ -11,7 +11,8 @@
   "license": "ISC",
   "dependencies": {
     "@open-ibc/vibc-core-smart-contracts": "^0.0.8",
-    "bytes32": "^0.0.3"
+    "bytes32": "^0.0.3",
+    "dotenv": "^16.3.1"
   },
   "devDependencies": {
     "@nomicfoundation/hardhat-toolbox": "^3.0.0",

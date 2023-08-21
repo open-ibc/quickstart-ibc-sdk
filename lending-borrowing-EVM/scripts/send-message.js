@@ -25,7 +25,7 @@ async function main() {
 
   const ibcLendingBorrowing = await hre.ethers.getContractAt(
     'IbcLendingBorrowing',
-    '0xB10c73e50B9bdB51f3504F7104a411174B9C3aa3'
+    '0x37FA111284FBF97318CBe05C37fEC69071Dd4965'
   );
   // Now we'll send an IBC Packet with a message.
   // !!! Make sure a channel has been created (channel-0 is hardcoded)

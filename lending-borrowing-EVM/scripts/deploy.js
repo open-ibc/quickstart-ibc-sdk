@@ -22,16 +22,19 @@ async function main() {
 
   console.log('OpenIBC Token address:', openIbc.target);
 
-  // Nebular Token deployment
-  const nebular = await hre.ethers.deployContract('NebularToken', accounts[3]);
-  await nebular.waitForDeployment();
+  //  IbcGlobal Token deployment
+  const ibcGlobal = await hre.ethers.deployContract(
+    'IbcGlobalToken',
+    accounts[2]
+  );
+  await ibcGlobal.waitForDeployment();
 
-  console.log('Nebular Token address:', nebular.target);
+  console.log('IbcGlobal Token address:', ibcGlobal.target);
 
   // IBC enabled lending/borrowing contract deployment
   const ibcLendingBorrowing = await hre.ethers.deployContract(
     'IbcLendingBorrowing',
-    [polymer.target, openIbc.target, nebular.target]
+    [polymer.target, openIbc.target, ibcGlobal.target]
   );
   await ibcLendingBorrowing.waitForDeployment();
 
@@ -40,7 +43,7 @@ async function main() {
   // Now all contracts have been deployed,
   // make sure to copy and update the contract addresses in scripts/interact.js
 
-  console.log('Address to receive the loan: ', accounts[4].address);
+  console.log('Address to receive the loan: ', accounts[3].address);
 }
 
 // We recommend this pattern to be able to use async/await everywhere

@@ -20,9 +20,9 @@ async function main() {
   //   '0x85E9BbfE1BC5f87e6dE8b60fbcbE8DDE9EA12c0C'
   // );
 
-  const nebular = await hre.ethers.getContractAt(
-    'NebularToken',
-    '0xdcAD6B6CcabAdd7B3078F07fe80AcAeA279dBcbC'
+  const ibcGlobal = await hre.ethers.getContractAt(
+    'IbcGlobalToken',
+    '0xf5c95209818EFAB8162008f4dE236A972eBA68a1'
   );
 
   const ibcLendingBorrowing = await hre.ethers.getContractAt(
@@ -31,8 +31,8 @@ async function main() {
   );
 
   console.log(
-    'After receiving the IBC packet and borrowing, $NEB balance: ',
-    await nebular.balanceOf(accounts[4])
+    'After receiving the IBC packet and borrowing, $IBCG balance: ',
+    await ibcGlobal.balanceOf(accounts[3])
   );
 }
 
