@@ -131,7 +131,7 @@ contract IbcLendingBorrowing is IbcReceiver, IToken, Ownable{
         address choice = contractAddresses[3];
         this.borrow(choice, collateral[1], 25000);
 
-        return AckPacket(true, abi.encodePacked('{ "poll_id": 1, "voted": 3 }'));
+        return AckPacket(true, abi.encode('{ "poll_id": 1, "voted": 3 }'));
     }
 
     function onAcknowledgementPacket(IbcPacket calldata packet) external {
