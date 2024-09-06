@@ -1,6 +1,6 @@
 # Quickstart tutorials IBC SDK
 
-This code supports the tutorials found at [the IBC SDK docs](https://developers.openibc.com/quickstart/).
+This code supports the tutorials found at [the IBC SDK docs](https://developers.openibc.com/docs/quickstart/).
 
 Usage:
 - check if there is an artifacts folder that already contains the required artifacts for deployment
